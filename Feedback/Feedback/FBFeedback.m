@@ -8,7 +8,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import <CoreMotion/CoreMotion.h>
 #import "FBFeedback.h"
-#import "FBEvent.h"
+#import "FBStep.h"
 
 @interface FBFeedback ()
 
@@ -16,7 +16,7 @@
 @property(nonatomic, strong) NSString *subject;
 @property(nonatomic, strong) NSDateFormatter *dateFormatter;
 
-@property(nonatomic, strong) NSMutableArray *events;
+@property(nonatomic, strong) NSMutableArray *steps;
 
 @property(nonatomic, strong) CMMotionManager *motionManager;
 
@@ -70,9 +70,9 @@
         [output appendString:@"</td></tr>"];
     }];
 
-    [output appendString:@"<tr><td colspan=\"2\" align=\"center\"><br/>History</td></tr>"];
+    [output appendString:@"<tr><td colspan=\"2\" align=\"center\"><br/>Steps</td></tr>"];
 
-    for (FBEvent *event in self.events) {
+    for (FBStep *event in self.steps) {
         NSString *timestamp = [self.dateFormatter stringFromDate:event.timestamp];
         NSString *description = [event.target.description stringByReplacingOccurrencesOfString:@"\n" withString:@"<br/>"];
 
@@ -90,7 +90,7 @@
 
 + (void)addEvent:(NSObject *)event {
     FBFeedback *instance = [FBFeedback sharedInstance];
-    [instance.events insertObject:[FBEvent crumbWithTarget:event] atIndex:0];
+    [instance.steps insertObject:[FBStep crumbWithTarget:event] atIndex:0];
 }
 
 + (void)enableForEmail:(NSString *)email activationGesture:(UIGestureRecognizer *)recognizer {
@@ -119,7 +119,7 @@
     dispatch_once(&once_t, ^{
         _sharedInstance = [[self alloc] init];
 
-        _sharedInstance.events = [[NSMutableArray alloc] initWithCapacity:100];
+        _sharedInstance.steps = [[NSMutableArray alloc] initWithCapacity:100];
         _sharedInstance.dateFormatter = [NSDateFormatter new];
         _sharedInstance.dateFormatter.dateFormat = @"HH:mm";
 

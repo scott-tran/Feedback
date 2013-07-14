@@ -4,9 +4,9 @@
 
 
 
-#import "FBEvent.h"
+#import "FBStep.h"
 
-@implementation FBEvent {
+@implementation FBStep {
 
 }
 
@@ -14,7 +14,7 @@
 @synthesize timestamp = _timestamp;
 
 + (id)crumbWithTarget:(NSObject *)target {
-    FBEvent *crumb = [FBEvent new];
+    FBStep *crumb = [FBStep new];
 
     crumb.target = target;
     crumb.timestamp = [NSDate date];

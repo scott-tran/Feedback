@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		68B020A0D223BC8C0D5F6989 /* FBEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B021345D3215391C53B0DE /* FBEvent.m */; };
+		68B020A0D223BC8C0D5F6989 /* FBStep.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B021345D3215391C53B0DE /* FBStep.m */; };
 		68B022C9611FE9042A2302A8 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68B024CAE7C916F67DF14D16 /* MessageUI.framework */; };
 		68B02410BBE9E62FB095BCF1 /* FBFeedback.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B02D5D06B532E3C482FC62 /* FBFeedback.m */; };
 		68B0274AEE2D0226C424AF9B /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68B02BA8A42E696EE8ABF189 /* CoreMotion.framework */; };
@@ -28,13 +28,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		68B021345D3215391C53B0DE /* FBEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBEvent.m; sourceTree = "<group>"; };
+		68B021345D3215391C53B0DE /* FBStep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBStep.m; sourceTree = "<group>"; };
 		68B02370BDA59571E39F294B /* FBFeedback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBFeedback.h; sourceTree = "<group>"; };
 		68B024CAE7C916F67DF14D16 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		68B024F7F1341A866AF3CBF4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		68B02BA8A42E696EE8ABF189 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		68B02D5D06B532E3C482FC62 /* FBFeedback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBFeedback.m; sourceTree = "<group>"; };
-		68B02E791B7BC8C7DCD284F6 /* FBEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBEvent.h; sourceTree = "<group>"; };
+		68B02E791B7BC8C7DCD284F6 /* FBStep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBStep.h; sourceTree = "<group>"; };
 		E49DDB0D17930C630037061B /* libFeedback.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFeedback.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E49DDB1017930C630037061B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E49DDB1417930C630037061B /* Feedback-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Feedback-Prefix.pch"; sourceTree = "<group>"; };
@@ -58,9 +58,9 @@
 		68B02D5259309510FBED5F48 /* Feedback */ = {
 			isa = PBXGroup;
 			children = (
-				68B021345D3215391C53B0DE /* FBEvent.m */,
+				68B021345D3215391C53B0DE /* FBStep.m */,
 				68B02D5D06B532E3C482FC62 /* FBFeedback.m */,
-				68B02E791B7BC8C7DCD284F6 /* FBEvent.h */,
+				68B02E791B7BC8C7DCD284F6 /* FBStep.h */,
 				68B02370BDA59571E39F294B /* FBFeedback.h */,
 			);
 			path = Feedback;
@@ -162,7 +162,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68B020A0D223BC8C0D5F6989 /* FBEvent.m in Sources */,
+				68B020A0D223BC8C0D5F6989 /* FBStep.m in Sources */,
 				68B02410BBE9E62FB095BCF1 /* FBFeedback.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

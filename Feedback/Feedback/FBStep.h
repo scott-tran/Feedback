@@ -7,7 +7,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface FBEvent : NSObject
+@interface FBStep : NSObject
 
 @property(nonatomic, strong) NSObject *target;
 @property(nonatomic, strong) NSDate *timestamp;
